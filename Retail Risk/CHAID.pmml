@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.4">
+	<Header>
+		<Application name="SkLearn2PMML package" version="0.88.1"/>
+		<Timestamp>2022-12-11T18:44:56Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="target" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="WOE_ALL2327" optype="categorical" dataType="double">
+			<Value value="-1.463339541"/>
+			<Value value="-0.447208211"/>
+			<Value value="-0.109909196"/>
+			<Value value="0.413286084"/>
+		</DataField>
+		<DataField name="WOE_BCC5830" optype="categorical" dataType="double">
+			<Value value="-0.693142505"/>
+			<Value value="-0.155451259"/>
+			<Value value="-0.109909196"/>
+			<Value value="0.244914422"/>
+			<Value value="0.872136922"/>
+		</DataField>
+		<DataField name="WOE_BCC7110" optype="categorical" dataType="double">
+			<Value value="-1.502515655"/>
+			<Value value="-0.483721694"/>
+			<Value value="-0.222646093"/>
+			<Value value="-0.109909196"/>
+			<Value value="0.751054129"/>
+		</DataField>
+		<DataField name="WOE_CVPRTPR212" optype="categorical" dataType="double">
+			<Value value="-1.044706414"/>
+			<Value value="-0.211593026"/>
+			<Value value="-0.118791394"/>
+			<Value value="0.300539722"/>
+			<Value value="0.569830277"/>
+		</DataField>
+		<DataField name="WOE_CVSC100" optype="categorical" dataType="double">
+			<Value value="-1.742633061"/>
+			<Value value="-0.597480962"/>
+			<Value value="-0.118791394"/>
+			<Value value="0.469315498"/>
+			<Value value="1.859388118"/>
+		</DataField>
+		<DataField name="WOE_REV2328" optype="categorical" dataType="double">
+			<Value value="-1.184235867"/>
+			<Value value="-0.36742672"/>
+			<Value value="-0.109909196"/>
+			<Value value="0.397237048"/>
+		</DataField>
+		<DataField name="WOE_TBSG001B" optype="categorical" dataType="double">
+			<Value value="-1.555930714"/>
+			<Value value="0.022386773"/>
+			<Value value="0.248216504"/>
+			<Value value="0.642846013"/>
+		</DataField>
+		<DataField name="WOE_TBSSC100" optype="categorical" dataType="double">
+			<Value value="-0.780669264"/>
+			<Value value="-0.55537043"/>
+			<Value value="0.233116812"/>
+			<Value value="1.041280154"/>
+			<Value value="1.801820694"/>
+		</DataField>
+		<DataField name="WOE_cust_max_dlq_3mos" optype="categorical" dataType="double">
+			<Value value="-2.67145207769814"/>
+			<Value value="-2.5843674433186385"/>
+			<Value value="-1.906721808155482"/>
+			<Value value="0.5790785766102315"/>
+		</DataField>
+		<DataField name="WOE_dda_av_bal" optype="categorical" dataType="double">
+			<Value value="-1.000382259"/>
+			<Value value="-0.485121989"/>
+			<Value value="0.025116256"/>
+			<Value value="0.777060596"/>
+			<Value value="0.931759695"/>
+		</DataField>
+		<DataField name="WOE_dda_avg_dly_dep_amt_L90" optype="categorical" dataType="double">
+			<Value value="-0.771558584"/>
+			<Value value="-0.239723121"/>
+			<Value value="0.482895976"/>
+			<Value value="0.777060596"/>
+			<Value value="1.049503161"/>
+		</DataField>
+		<DataField name="WOE_dda_sum_Acc_Db_Bal" optype="categorical" dataType="double">
+			<Value value="-0.972497122"/>
+			<Value value="-0.694147105"/>
+			<Value value="-0.258288578"/>
+			<Value value="0.777060596"/>
+			<Value value="0.924820711"/>
+		</DataField>
+		<DataField name="WOE_max_ks_max_util_3mos" optype="categorical" dataType="double">
+			<Value value="-1.287173361"/>
+			<Value value="-0.354041427"/>
+			<Value value="0.017097243"/>
+			<Value value="0.61682937"/>
+			<Value value="1.087368287"/>
+		</DataField>
+	</DataDictionary>
+	<TreeModel functionName="classification" algorithmName="sklearn2pmml.tree.chaid.CHAIDClassifier">
+		<MiningSchema>
+			<MiningField name="target" usageType="target"/>
+			<MiningField name="WOE_ALL2327" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_BCC5830" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_BCC7110" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_CVPRTPR212" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_CVSC100" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_REV2328" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_TBSG001B" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_TBSSC100" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_cust_max_dlq_3mos" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_dda_av_bal" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_dda_avg_dly_dep_amt_L90" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_dda_sum_Acc_Db_Bal" missingValueTreatment="asIs"/>
+			<MiningField name="WOE_max_ks_max_util_3mos" missingValueTreatment="asIs"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="nodeId" optype="categorical" dataType="integer" feature="entityId"/>
+			<OutputField name="probability(0)" optype="continuous" dataType="double" feature="probability" value="0"/>
+			<OutputField name="probability(1)" optype="continuous" dataType="double" feature="probability" value="1"/>
+		</Output>
+		<ModelStats>
+			<UnivariateStats field="WOE_ALL2327">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.463339541 -0.447208211 -0.109909196 0.413286084</Array>
+					<Array type="int">410 778 64 4081</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_BCC5830">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-0.693142505 -0.155451259 -0.109909196 0.244914422 0.872136922</Array>
+					<Array type="int">1441 269 64 2117 1442</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_BCC7110">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.502515655 -0.483721694 -0.222646093 -0.109909196 0.751054129</Array>
+					<Array type="int">348 1445 277 64 3199</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_CVPRTPR212">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.044706414 -0.211593026 -0.118791394 0.300539722 0.569830277</Array>
+					<Array type="int">620 1096 64 2082 1471</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_CVSC100">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.742633061 -0.597480962 -0.118791394 0.469315498 1.859388118</Array>
+					<Array type="int">377 1169 64 2531 1192</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_REV2328">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.184235867 -0.36742672 -0.109909196 0.397237048</Array>
+					<Array type="int">517 875 64 3877</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_TBSG001B">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.555930714 0.022386773 0.248216504 0.642846013</Array>
+					<Array type="int">578 956 558 3241</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_TBSSC100">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-0.780669264 -0.55537043 0.233116812 1.041280154 1.801820694</Array>
+					<Array type="int">566 1755 989 1012 1011</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_cust_max_dlq_3mos">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-2.67145207769814 -2.5843674433186385 -1.906721808155482 0.5790785766102315</Array>
+					<Array type="int">138 86 249 4860</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_dda_av_bal">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.000382259 -0.485121989 0.025116256 0.777060596 0.931759695</Array>
+					<Array type="int">804 487 1680 597 1765</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_dda_avg_dly_dep_amt_L90">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-0.771558584 -0.239723121 0.482895976 0.777060596 1.049503161</Array>
+					<Array type="int">1002 1442 1390 597 902</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_dda_sum_Acc_Db_Bal">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-0.972497122 -0.694147105 -0.258288578 0.777060596 0.924820711</Array>
+					<Array type="int">1110 517 324 597 2785</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="WOE_max_ks_max_util_3mos">
+				<Counts totalFreq="5333" missingFreq="0" invalidFreq="0"/>
+				<DiscrStats>
+					<Array type="string">-1.287173361 -0.354041427 0.017097243 0.61682937 1.087368287</Array>
+					<Array type="int">561 1383 757 788 1844</Array>
+				</DiscrStats>
+			</UnivariateStats>
+		</ModelStats>
+		<Node id="0" score="0" recordCount="5333">
+			<True/>
+			<ScoreDistribution value="0" recordCount="4804"/>
+			<ScoreDistribution value="1" recordCount="529"/>
+			<Node id="1" score="1" recordCount="224">
+				<SimpleSetPredicate field="WOE_cust_max_dlq_3mos" booleanOperator="isIn">
+					<Array type="real">-2.67145207769814 -2.5843674433186385</Array>
+				</SimpleSetPredicate>
+				<ScoreDistribution value="0" recordCount="85"/>
+				<ScoreDistribution value="1" recordCount="139"/>
+				<Node id="2" score="1" recordCount="46">
+					<SimpleSetPredicate field="WOE_CVSC100" booleanOperator="isIn">
+						<Array type="real">-1.742633061 -0.118791394</Array>
+					</SimpleSetPredicate>
+					<ScoreDistribution value="0" recordCount="8"/>
+					<ScoreDistribution value="1" recordCount="38"/>
+				</Node>
+				<Node id="3" score="1" recordCount="178">
+					<SimpleSetPredicate field="WOE_CVSC100" booleanOperator="isIn">
+						<Array type="real">-0.597480962 0.469315498 1.859388118</Array>
+					</SimpleSetPredicate>
+					<ScoreDistribution value="0" recordCount="77"/>
+					<ScoreDistribution value="1" recordCount="101"/>
+					<Node id="4" score="1" recordCount="74">
+						<SimplePredicate field="WOE_TBSG001B" operator="equal" value="-1.555930714"/>
+						<ScoreDistribution value="0" recordCount="22"/>
+						<ScoreDistribution value="1" recordCount="52"/>
+						<Node id="5" score="1" recordCount="33">
+							<SimplePredicate field="WOE_BCC5830" operator="equal" value="-0.693142505"/>
+							<ScoreDistribution value="0" recordCount="4"/>
+							<ScoreDistribution value="1" recordCount="29"/>
+						</Node>
+						<Node id="6" score="1" recordCount="41">
+							<SimpleSetPredicate field="WOE_BCC5830" booleanOperator="isIn">
+								<Array type="real">-0.155451259 0.244914422 0.872136922 -0.109909196</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="18"/>
+							<ScoreDistribution value="1" recordCount="23"/>
+						</Node>
+					</Node>
+					<Node id="7" score="0" recordCount="104">
+						<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+							<Array type="real">0.022386773 0.642846013 0.248216504</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="55"/>
+						<ScoreDistribution value="1" recordCount="49"/>
+						<Node id="8" score="0" recordCount="68">
+							<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+								<Array type="real">-0.771558584 1.049503161</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="42"/>
+							<ScoreDistribution value="1" recordCount="26"/>
+						</Node>
+						<Node id="9" score="1" recordCount="36">
+							<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+								<Array type="real">-0.239723121 0.482895976 0.777060596</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="13"/>
+							<ScoreDistribution value="1" recordCount="23"/>
+						</Node>
+					</Node>
+				</Node>
+			</Node>
+			<Node id="10" score="0" recordCount="249">
+				<SimplePredicate field="WOE_cust_max_dlq_3mos" operator="equal" value="-1.906721808155482"/>
+				<ScoreDistribution value="0" recordCount="142"/>
+				<ScoreDistribution value="1" recordCount="107"/>
+				<Node id="11" score="1" recordCount="54">
+					<SimpleSetPredicate field="WOE_CVSC100" booleanOperator="isIn">
+						<Array type="real">-1.742633061 -0.118791394</Array>
+					</SimpleSetPredicate>
+					<ScoreDistribution value="0" recordCount="16"/>
+					<ScoreDistribution value="1" recordCount="38"/>
+				</Node>
+				<Node id="12" score="0" recordCount="195">
+					<SimpleSetPredicate field="WOE_CVSC100" booleanOperator="isIn">
+						<Array type="real">-0.597480962 0.469315498 1.859388118</Array>
+					</SimpleSetPredicate>
+					<ScoreDistribution value="0" recordCount="126"/>
+					<ScoreDistribution value="1" recordCount="69"/>
+					<Node id="13" score="0" recordCount="125">
+						<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+							<Array type="real">-0.771558584 -0.239723121</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="70"/>
+						<ScoreDistribution value="1" recordCount="55"/>
+						<Node id="14" score="1" recordCount="69">
+							<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+								<Array type="real">-0.972497122 0.924820711 0.777060596</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="28"/>
+							<ScoreDistribution value="1" recordCount="41"/>
+						</Node>
+						<Node id="15" score="0" recordCount="56">
+							<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+								<Array type="real">-0.694147105 -0.258288578</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="42"/>
+							<ScoreDistribution value="1" recordCount="14"/>
+						</Node>
+					</Node>
+					<Node id="16" score="0" recordCount="70">
+						<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+							<Array type="real">0.482895976 0.777060596 1.049503161</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="56"/>
+						<ScoreDistribution value="1" recordCount="14"/>
+						<Node id="17" score="0" recordCount="32">
+							<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+								<Array type="real">-1.555930714 0.022386773</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="22"/>
+							<ScoreDistribution value="1" recordCount="10"/>
+						</Node>
+						<Node id="18" score="0" recordCount="38">
+							<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+								<Array type="real">0.248216504 0.642846013</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="34"/>
+							<ScoreDistribution value="1" recordCount="4"/>
+						</Node>
+					</Node>
+				</Node>
+			</Node>
+			<Node id="19" score="0" recordCount="4860">
+				<SimplePredicate field="WOE_cust_max_dlq_3mos" operator="equal" value="0.5790785766102315"/>
+				<ScoreDistribution value="0" recordCount="4577"/>
+				<ScoreDistribution value="1" recordCount="283"/>
+				<Node id="20" score="0" recordCount="283">
+					<SimplePredicate field="WOE_CVSC100" operator="equal" value="-1.742633061"/>
+					<ScoreDistribution value="0" recordCount="208"/>
+					<ScoreDistribution value="1" recordCount="75"/>
+					<Node id="21" score="0" recordCount="151">
+						<SimpleSetPredicate field="WOE_CVPRTPR212" booleanOperator="isIn">
+							<Array type="real">-1.044706414 -0.211593026 -0.118791394</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="97"/>
+						<ScoreDistribution value="1" recordCount="54"/>
+						<Node id="22" score="0" recordCount="66">
+							<SimplePredicate field="WOE_REV2328" operator="equal" value="-1.184235867"/>
+							<ScoreDistribution value="0" recordCount="33"/>
+							<ScoreDistribution value="1" recordCount="33"/>
+						</Node>
+						<Node id="23" score="0" recordCount="85">
+							<SimpleSetPredicate field="WOE_REV2328" booleanOperator="isIn">
+								<Array type="real">-0.36742672 0.397237048 -0.109909196</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="64"/>
+							<ScoreDistribution value="1" recordCount="21"/>
+							<Node id="24" score="0" recordCount="44">
+								<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+									<Array type="real">-1.000382259 0.777060596 0.931759695</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="40"/>
+								<ScoreDistribution value="1" recordCount="4"/>
+							</Node>
+							<Node id="25" score="0" recordCount="41">
+								<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+									<Array type="real">-0.485121989 0.025116256</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="24"/>
+								<ScoreDistribution value="1" recordCount="17"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node id="26" score="0" recordCount="132">
+						<SimpleSetPredicate field="WOE_CVPRTPR212" booleanOperator="isIn">
+							<Array type="real">0.300539722 0.569830277</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="111"/>
+						<ScoreDistribution value="1" recordCount="21"/>
+						<Node id="27" score="0" recordCount="44">
+							<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+								<Array type="real">-1.000382259 -0.485121989</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="31"/>
+							<ScoreDistribution value="1" recordCount="13"/>
+						</Node>
+						<Node id="28" score="0" recordCount="88">
+							<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+								<Array type="real">0.025116256 0.777060596 0.931759695</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="80"/>
+							<ScoreDistribution value="1" recordCount="8"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node id="29" score="0" recordCount="1073">
+					<SimpleSetPredicate field="WOE_CVSC100" booleanOperator="isIn">
+						<Array type="real">-0.597480962 -0.118791394</Array>
+					</SimpleSetPredicate>
+					<ScoreDistribution value="0" recordCount="954"/>
+					<ScoreDistribution value="1" recordCount="119"/>
+					<Node id="30" score="0" recordCount="193">
+						<SimplePredicate field="WOE_dda_av_bal" operator="equal" value="-1.000382259"/>
+						<ScoreDistribution value="0" recordCount="145"/>
+						<ScoreDistribution value="1" recordCount="48"/>
+						<Node id="31" score="0" recordCount="113">
+							<SimpleSetPredicate field="WOE_max_ks_max_util_3mos" booleanOperator="isIn">
+								<Array type="real">-1.287173361 -0.354041427 0.61682937</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="73"/>
+							<ScoreDistribution value="1" recordCount="40"/>
+							<Node id="32" score="1" recordCount="37">
+								<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+									<Array type="real">-1.555930714 0.248216504</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="16"/>
+								<ScoreDistribution value="1" recordCount="21"/>
+							</Node>
+							<Node id="33" score="0" recordCount="76">
+								<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+									<Array type="real">0.022386773 0.642846013</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="57"/>
+								<ScoreDistribution value="1" recordCount="19"/>
+							</Node>
+						</Node>
+						<Node id="34" score="0" recordCount="80">
+							<SimpleSetPredicate field="WOE_max_ks_max_util_3mos" booleanOperator="isIn">
+								<Array type="real">0.017097243 1.087368287</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="72"/>
+							<ScoreDistribution value="1" recordCount="8"/>
+							<Node id="35" score="0" recordCount="30">
+								<SimpleSetPredicate field="WOE_BCC7110" booleanOperator="isIn">
+									<Array type="real">-1.502515655 -0.222646093 -0.109909196 0.751054129</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="30"/>
+							</Node>
+							<Node id="36" score="0" recordCount="50">
+								<SimplePredicate field="WOE_BCC7110" operator="equal" value="-0.483721694"/>
+								<ScoreDistribution value="0" recordCount="42"/>
+								<ScoreDistribution value="1" recordCount="8"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node id="37" score="0" recordCount="646">
+						<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+							<Array type="real">-0.485121989 0.025116256 0.777060596</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="581"/>
+						<ScoreDistribution value="1" recordCount="65"/>
+						<Node id="38" score="0" recordCount="145">
+							<SimplePredicate field="WOE_dda_sum_Acc_Db_Bal" operator="equal" value="-0.972497122"/>
+							<ScoreDistribution value="0" recordCount="115"/>
+							<ScoreDistribution value="1" recordCount="30"/>
+							<Node id="39" score="0" recordCount="59">
+								<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+									<Array type="real">-0.771558584 -0.239723121</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="38"/>
+								<ScoreDistribution value="1" recordCount="21"/>
+							</Node>
+							<Node id="40" score="0" recordCount="86">
+								<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+									<Array type="real">0.482895976 1.049503161 0.777060596</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="77"/>
+								<ScoreDistribution value="1" recordCount="9"/>
+							</Node>
+						</Node>
+						<Node id="41" score="0" recordCount="229">
+							<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+								<Array type="real">-0.694147105 0.777060596</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="205"/>
+							<ScoreDistribution value="1" recordCount="24"/>
+							<Node id="42" score="0" recordCount="34">
+								<SimplePredicate field="WOE_ALL2327" operator="equal" value="-1.463339541"/>
+								<ScoreDistribution value="0" recordCount="25"/>
+								<ScoreDistribution value="1" recordCount="9"/>
+							</Node>
+							<Node id="43" score="0" recordCount="195">
+								<SimpleSetPredicate field="WOE_ALL2327" booleanOperator="isIn">
+									<Array type="real">-0.447208211 -0.109909196 0.413286084</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="180"/>
+								<ScoreDistribution value="1" recordCount="15"/>
+							</Node>
+						</Node>
+						<Node id="44" score="0" recordCount="272">
+							<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+								<Array type="real">-0.258288578 0.924820711</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="261"/>
+							<ScoreDistribution value="1" recordCount="11"/>
+							<Node id="45" score="0" recordCount="71">
+								<SimplePredicate field="WOE_dda_av_bal" operator="equal" value="-0.485121989"/>
+								<ScoreDistribution value="0" recordCount="63"/>
+								<ScoreDistribution value="1" recordCount="8"/>
+							</Node>
+							<Node id="46" score="0" recordCount="201">
+								<SimpleSetPredicate field="WOE_dda_av_bal" booleanOperator="isIn">
+									<Array type="real">0.025116256 -1.000382259 0.777060596 0.931759695</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="198"/>
+								<ScoreDistribution value="1" recordCount="3"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node id="47" score="0" recordCount="234">
+						<SimplePredicate field="WOE_dda_av_bal" operator="equal" value="0.931759695"/>
+						<ScoreDistribution value="0" recordCount="228"/>
+						<ScoreDistribution value="1" recordCount="6"/>
+						<Node id="48" score="0" recordCount="97">
+							<SimpleSetPredicate field="WOE_BCC5830" booleanOperator="isIn">
+								<Array type="real">-0.693142505 -0.109909196</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="91"/>
+							<ScoreDistribution value="1" recordCount="6"/>
+						</Node>
+						<Node id="49" score="0" recordCount="137">
+							<SimpleSetPredicate field="WOE_BCC5830" booleanOperator="isIn">
+								<Array type="real">-0.155451259 0.244914422 0.872136922</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="137"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node id="50" score="0" recordCount="2354">
+					<SimplePredicate field="WOE_CVSC100" operator="equal" value="0.469315498"/>
+					<ScoreDistribution value="0" recordCount="2276"/>
+					<ScoreDistribution value="1" recordCount="78"/>
+					<Node id="51" score="0" recordCount="557">
+						<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+							<Array type="real">-0.972497122 -0.694147105</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="513"/>
+						<ScoreDistribution value="1" recordCount="44"/>
+						<Node id="52" score="0" recordCount="27">
+							<SimplePredicate field="WOE_dda_avg_dly_dep_amt_L90" operator="equal" value="-0.771558584"/>
+							<ScoreDistribution value="0" recordCount="18"/>
+							<ScoreDistribution value="1" recordCount="9"/>
+						</Node>
+						<Node id="53" score="0" recordCount="366">
+							<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+								<Array type="real">-0.239723121 0.482895976 0.777060596</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="336"/>
+							<ScoreDistribution value="1" recordCount="30"/>
+							<Node id="54" score="0" recordCount="83">
+								<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+									<Array type="real">-1.555930714 0.248216504</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="69"/>
+								<ScoreDistribution value="1" recordCount="14"/>
+							</Node>
+							<Node id="55" score="0" recordCount="283">
+								<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+									<Array type="real">0.022386773 0.642846013</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="267"/>
+								<ScoreDistribution value="1" recordCount="16"/>
+							</Node>
+						</Node>
+						<Node id="56" score="0" recordCount="164">
+							<SimplePredicate field="WOE_dda_avg_dly_dep_amt_L90" operator="equal" value="1.049503161"/>
+							<ScoreDistribution value="0" recordCount="159"/>
+							<ScoreDistribution value="1" recordCount="5"/>
+							<Node id="57" score="0" recordCount="7">
+								<SimplePredicate field="WOE_TBSSC100" operator="equal" value="-0.780669264"/>
+								<ScoreDistribution value="0" recordCount="5"/>
+								<ScoreDistribution value="1" recordCount="2"/>
+							</Node>
+							<Node id="58" score="0" recordCount="123">
+								<SimpleSetPredicate field="WOE_TBSSC100" booleanOperator="isIn">
+									<Array type="real">-0.55537043 1.801820694 0.233116812</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="120"/>
+								<ScoreDistribution value="1" recordCount="3"/>
+							</Node>
+							<Node id="59" score="0" recordCount="34">
+								<SimplePredicate field="WOE_TBSSC100" operator="equal" value="1.041280154"/>
+								<ScoreDistribution value="0" recordCount="34"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node id="60" score="0" recordCount="1797">
+						<SimpleSetPredicate field="WOE_dda_sum_Acc_Db_Bal" booleanOperator="isIn">
+							<Array type="real">-0.258288578 0.924820711 0.777060596</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="1763"/>
+						<ScoreDistribution value="1" recordCount="34"/>
+						<Node id="61" score="0" recordCount="840">
+							<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+								<Array type="real">-0.771558584 -0.239723121</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="813"/>
+							<ScoreDistribution value="1" recordCount="27"/>
+							<Node id="62" score="0" recordCount="55">
+								<SimplePredicate field="WOE_TBSG001B" operator="equal" value="-1.555930714"/>
+								<ScoreDistribution value="0" recordCount="50"/>
+								<ScoreDistribution value="1" recordCount="5"/>
+							</Node>
+							<Node id="63" score="0" recordCount="785">
+								<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+									<Array type="real">0.022386773 0.642846013 0.248216504</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="763"/>
+								<ScoreDistribution value="1" recordCount="22"/>
+							</Node>
+						</Node>
+						<Node id="64" score="0" recordCount="957">
+							<SimpleSetPredicate field="WOE_dda_avg_dly_dep_amt_L90" booleanOperator="isIn">
+								<Array type="real">0.482895976 0.777060596 1.049503161</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="950"/>
+							<ScoreDistribution value="1" recordCount="7"/>
+							<Node id="65" score="0" recordCount="224">
+								<SimpleSetPredicate field="WOE_BCC5830" booleanOperator="isIn">
+									<Array type="real">-0.693142505 -0.155451259</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="219"/>
+								<ScoreDistribution value="1" recordCount="5"/>
+							</Node>
+							<Node id="66" score="0" recordCount="733">
+								<SimpleSetPredicate field="WOE_BCC5830" booleanOperator="isIn">
+									<Array type="real">0.244914422 0.872136922 -0.109909196</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="731"/>
+								<ScoreDistribution value="1" recordCount="2"/>
+							</Node>
+						</Node>
+					</Node>
+				</Node>
+				<Node id="67" score="0" recordCount="1150">
+					<SimplePredicate field="WOE_CVSC100" operator="equal" value="1.859388118"/>
+					<ScoreDistribution value="0" recordCount="1139"/>
+					<ScoreDistribution value="1" recordCount="11"/>
+					<Node id="68" score="0" recordCount="4">
+						<SimplePredicate field="WOE_BCC7110" operator="equal" value="-1.502515655"/>
+						<ScoreDistribution value="0" recordCount="3"/>
+						<ScoreDistribution value="1" recordCount="1"/>
+					</Node>
+					<Node id="69" score="0" recordCount="75">
+						<SimplePredicate field="WOE_BCC7110" operator="equal" value="-0.483721694"/>
+						<ScoreDistribution value="0" recordCount="74"/>
+						<ScoreDistribution value="1" recordCount="1"/>
+					</Node>
+					<Node id="70" score="0" recordCount="1071">
+						<SimpleSetPredicate field="WOE_BCC7110" booleanOperator="isIn">
+							<Array type="real">-0.222646093 0.751054129 -0.109909196</Array>
+						</SimpleSetPredicate>
+						<ScoreDistribution value="0" recordCount="1062"/>
+						<ScoreDistribution value="1" recordCount="9"/>
+						<Node id="71" score="0" recordCount="33">
+							<SimplePredicate field="WOE_TBSG001B" operator="equal" value="-1.555930714"/>
+							<ScoreDistribution value="0" recordCount="31"/>
+							<ScoreDistribution value="1" recordCount="2"/>
+						</Node>
+						<Node id="72" score="0" recordCount="1038">
+							<SimpleSetPredicate field="WOE_TBSG001B" booleanOperator="isIn">
+								<Array type="real">0.022386773 0.248216504 0.642846013</Array>
+							</SimpleSetPredicate>
+							<ScoreDistribution value="0" recordCount="1031"/>
+							<ScoreDistribution value="1" recordCount="7"/>
+							<Node id="73" score="0" recordCount="632">
+								<SimpleSetPredicate field="WOE_max_ks_max_util_3mos" booleanOperator="isIn">
+									<Array type="real">-1.287173361 0.017097243 1.087368287</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="631"/>
+								<ScoreDistribution value="1" recordCount="1"/>
+							</Node>
+							<Node id="74" score="0" recordCount="406">
+								<SimpleSetPredicate field="WOE_max_ks_max_util_3mos" booleanOperator="isIn">
+									<Array type="real">-0.354041427 0.61682937</Array>
+								</SimpleSetPredicate>
+								<ScoreDistribution value="0" recordCount="400"/>
+								<ScoreDistribution value="1" recordCount="6"/>
+							</Node>
+						</Node>
+					</Node>
+				</Node>
+			</Node>
+		</Node>
+	</TreeModel>
+</PMML>
